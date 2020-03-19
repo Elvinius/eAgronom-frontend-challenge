@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Elvin Abbasli">
+    <meta lang="EN">
+    <meta name="viewport" content="width=device‐width, initial‐scale=1.0">
+    <title>eAgronom</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body class="blue">
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <label for="comment-input">Comment</label>
+            <input type="textarea" placeholder="Write comment" class="modal-input" id="comment-input" name="comment-input">
+            <div class="comment-cancel"><button type="button" class="btn cancel" data-dismiss="modal"><span>Cancel</span></button></div>
+            <div class="primary-save"><button type="button" class="btn save" ><span>Save</span></button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="container">
+  <div class="task-details mb-5">
+    <div class="rectangle">
+      <div class="left-side-button">
+        <div class="icon-navigation">
+          <div class="left-arrow-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 7H3.83L9.42 1.41L8 0L0 8L8 16L9.41 14.59L3.83 9H16V7Z" fill="#717171"/>
+            </svg>
+            </div>
+        </div>
+      </div>
+      <div class="main-info"><span>Good field</span>
+          <p>Fertilization</p>
+          <div class="map-button">
+            <div class="map-icon">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M17.34 0.03L17.5 0C17.78 0 18 0.22 18 0.5V15.62C18 15.85 17.85 16.03 17.64 16.1L12 18L6 15.9L0.66 17.97L0.5 18C0.22 18 0 17.78 0 17.5V2.38C0 2.15 0.15 1.97 0.36 1.9L6 0L12 2.1L17.34 0.03ZM11 3.87L7 2.47V14.13L11 15.53V3.87ZM2 3.46L5 2.45V14.15L2 15.31V3.46ZM13 15.55L16 14.54V2.7L13 3.86V15.55Z" fill="#717171"/>
+              </svg>
+              </div>
+          </div>
+      </div>
+      <div class="delete">
+        <div class="delete-icon">
+          <div class="delete-icon-location"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0L10.5 1H14V3H0V1H3.5L4.5 0H9.5ZM1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM3.46 8.88L4.87 7.47L7 9.59L9.12 7.47L10.53 8.88L8.41 11L10.53 13.12L9.12 14.53L7 12.41L4.88 14.53L3.47 13.12L5.59 11L3.46 8.88Z" fill="#717171"/>
+            </svg>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main content part -->
+    <div class="field-details">
+        <div id="head-info-text">Field</div>
+        <div class="mobile-list"> 
+            <div class="pressed">
+                <div id="field-text">Good field</div>
+                <span class="product-info">21.97 ha  ·  Wheat (Anderson)</span>
+                <div class="field-ellipse"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="24" cy="24" r="23.5" fill="white" stroke="#B4B4B4"/>
+                  </svg> 
+                  <div id="icon-direction">
+                    <div class="icon-direction-inner">
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4274 9.5931L12.4174 0.583102C11.6674 -0.166898 10.3474 -0.176898 9.58744 0.583102L0.587441 9.5831C-0.192559 10.3631 -0.192559 11.6231 0.587441 12.4031L9.58744 21.4031C9.97744 21.7931 10.4874 21.9831 10.9974 21.9831C11.5074 21.9831 12.0174 21.7931 12.4074 21.4031L21.3974 12.4131C22.1874 11.6531 22.1974 10.3931 21.4274 9.5931ZM11.0074 19.9931L2.00744 10.9931L11.0074 1.9931L20.0074 10.9931L11.0074 19.9931ZM6.99744 14.0031V10.0031C6.99744 9.4531 7.44744 9.0031 7.99744 9.0031H12.9974V6.5031L16.4974 10.0031L12.9974 13.5031V11.0031H8.99744V14.0031H6.99744Z" fill="#717171"/>
+                        </svg>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="work-details">
+      <div class="details-heading">Details</div>
+      <div class="status">
+        <span>Status</span>
+        <div class="tag-green">
+          <div id="tag">
+            <span>To do</span>
+            <div class="to-do"></div>
+          </div>
+        </div>
+      </div>
+      <div class="area-info">
+        <span>Area</span>
+        <span class="number">21.97 ha</span>
+      </div>
+      <div class="date">
+        <span>Date</span>
+        <span class="date-info">--</span>
+      </div>
+      <div class="worker-info">
+          <span>Workers</span>
+          <span class="worker-name">Meelis Neetud</span>
+      </div>
+      <div class="notes">
+        <div id="notes-text">Notes</div>
+        <div id="stones">One of the stones was gone...</div>
+      </div>
+    </div>
+    <div class="history">
+      <div id="comments">Comments(1)</div>
+      <div class="user-comment-section">
+          <div id="user-area"><span class="user-name">Meelis Neetud </span> <span>· 23.05.2020</span></div>
+          <div id="user-comment">It started to rain, had to stop.</div>
+      </div>
+      <div class="main-input">
+          <input type="textarea" id="comment-input" name="comment-input" placeholder="Add comment" data-toggle="modal" data-target="#commentModal">
+          <div class="icon-editor"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M18 0H2C0.9 0 0 0.9 0 2V14C0 15.1 0.9 16 2 16H16L20 20V2C20 0.9 19.1 0 18 0ZM18 2V15.17L16.83 14H2V2H18ZM4 10H16V12H4V10ZM16 7H4V9H16V7ZM4 4H16V6H4V4Z" fill="#717171"/>
+            </svg>
+            </div>
+      </div>
+    <button>
+    <div class="primary-mobile">
+      <div class="button-ellipse">
+          <div class="check-button">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21.56L6.44003 16L4.54669 17.88L12 25.3334L28 9.33337L26.12 7.45337L12 21.56Z" fill="white"/>
+                </svg>
+          </div>
+      </div>
+    </div>
+  </button>
+  </div>
+</div>
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/js/mdb.min.js"></script>
+  </body>
+</html>

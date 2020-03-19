@@ -1,0 +1,639 @@
+@import 'modal.css';
+
+* {
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+div.task-details {
+    position: relative;
+    width: 412px;
+    height: 768px;
+    background: #FFFFFF;
+    top: 50px;
+    bottom: 40px;
+    margin-left: 30px; 
+}
+
+div.rectangle{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 412px;
+    height: 56px;
+    background: #FFFFFF;
+}
+
+div.left-side-button {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 4px;
+    top: 4px;
+    background: #FFFFFF;
+    border-radius: 500px;
+}
+
+div.icon-navigation {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 16px;
+    top: 16px;
+}
+
+div.left-arrow-icon {
+    position: absolute;
+    left: 16.67%;
+    right: 16.67%;
+    bottom: 16.67%;
+}
+
+div.main-info {
+    width: 300px;
+    height: 56px;
+    position: absolute;
+    left: 52px;
+    right: 60px;
+    top: 5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 132%;
+    align-items: center;
+    color: #333333;
+}
+
+div.main-info p {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+div.map-button {
+    position: absolute;
+    width: 40px;
+    height: 48px;
+    left: 275px;
+    top: 0px;
+}
+
+div.map-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 5px;
+}
+
+div.map {
+    position: absolute;
+    left: 12.5%;
+    right: 12.5%;
+    top: 12.5%;
+    bottom: 12.5%;
+}
+
+div.delete {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    right: 4px;
+    top: calc(50% - 48px/2);
+    background: #FFFFFF;
+    border-radius: 500px;  
+}
+
+div.delete-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 16px;
+    top: 10px;
+}
+
+div.delete-icon-location {
+    position: absolute;
+    left: 20.83%;
+    right: 20.83%;
+    bottom: 12.5%;
+}
+
+div.field-details {
+    position: absolute;
+    width: 380px;
+    height: 100px;
+    left: 16px;
+    top: 72px;
+}
+
+div.work-details {
+    position: absolute;
+    width: 413px;
+    height: 250px;
+    left: 0px;
+    top: 204px;
+}
+div#field-text {
+    position: absolute;
+    width: 74px;
+    height: 20px;
+    left: 16px;
+    top: 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #333333;
+}
+
+#head-info-text {
+    font-size: 1em;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 20px;
+    text-transform: uppercase;
+    position: absolute;
+    width: 48.75px;
+    height: 20px;
+    left: 0px;
+    top: 0px;
+    color: #333333;
+    text-align: left;
+}
+
+div.mobile-list {
+    position: absolute;
+    width: 380px;
+    height: 72px;
+    left: 0px;
+    top: 28px;
+}
+
+span.product-info {
+    position: absolute;
+    width: 184px;
+    height: 16px;
+    left: 16px;
+    top: 40px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #717171;
+}
+
+div.field-ellipse {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 316px;
+    top: 12px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+}
+
+div#icon-direction {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 7px;
+    right: 12px;
+}
+
+div.icon-direction-inner{
+    position: absolute;
+    left: 4.18%;
+    right: 4.18%;
+    top: 4.24%;
+    bottom: 4.24%;
+    width: 22px;
+    height: 21.97px;   
+}
+
+div.pressed {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+div.details-heading {
+    position: absolute;
+    width: 151.01px;
+    left: 16px;
+    top: 0%;
+    bottom: 91.2%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 19px;
+    color: #333333;
+}
+
+div.status {
+    position: absolute;
+    left: 0%;
+    right: 50.13%;
+    top: 8.8%;
+    bottom: 60.8%;
+}
+
+.status > span {
+    position: absolute;
+    width: 39px;
+    height: 20px;
+    left: 16px;
+    top: 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    display: flex;
+    align-items: center;
+    color: #717171;
+}
+
+div.tag-green {
+    position: absolute;
+    width: 63px;
+    height: 20px;
+    left: 16px;
+    top: 40px;
+}
+
+div#tag {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+#tag > span {
+    position: absolute;
+    height: 16px;
+    left: 4px;
+    right: 4px;
+    top: calc(50% - 16px/2);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.to-do {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: #717171;
+    border-radius: 4px;
+}
+
+div.area-info {
+    position: absolute;
+    left: 50.13%;
+    right: 0%;
+    top: 8.8%;
+    bottom: 60.8%;
+}
+
+.area-info > span {
+    position: absolute;
+    width: 29px;
+    height: 20px;
+    left: 16px;
+    top: 16px;
+    /* Mobile/Small text */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    display: flex;
+    align-items: center;
+    color: #717171;
+}
+
+span.number {
+    position: absolute;
+    width: 62px;
+    height: 20px;
+    left: 16px;
+    top: 40px; 
+    /* Mobile/Regular text */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+    display: flex;
+    align-items: center;
+    color: #333333;
+}
+
+div.date {
+    position: absolute;
+    left: 0%;
+    right: 50.13%;
+    top: 39.2%;
+    bottom: 30.4%;
+}
+
+.date > span {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    left: 16px;
+    top: 16px;
+    /* Mobile/Small text */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    display: flex;
+    align-items: center;
+    color: #717171;
+}
+
+.date .date-info {
+    position: absolute;
+    width: 12px;
+    height: 20px;
+    left: 16px;
+    top: 40px;
+    /* Mobile/Regular text */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+    display: flex;
+    align-items: center;
+    color: #333333;
+}
+
+.worker-info {
+    position: absolute;
+    left: 50.12%;
+    right: 0.01%;
+    top: 39.2%;
+    bottom: 30.4%;
+}
+
+.worker-info > span {
+    position: absolute;
+    width: 52px;
+    height: 20px;
+    left: 16px;
+    top: 16px;
+    /* Mobile/Small text */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    display: flex;
+    align-items: center;
+    color: #717171;
+}
+
+span.worker-name {
+    position: absolute;
+    width: 103px;
+    height: 20px;
+    left: 16px;
+    top: 40px;
+    /* Mobile/Regular text */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+    display: flex;
+    align-items: center;
+    color: #333333;
+}
+
+div.notes {
+    position: absolute;
+    width: 413px;
+    height: 76px;
+    left: 0%;
+    right: 0%;
+    top: 69.6%;
+    bottom: 0%;
+}
+
+#notes-text {
+    position: absolute;
+    width: 37px;
+    height: 20px;
+    left: 16px;
+    top: 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #717171;
+}
+
+#stones {
+    position: absolute;
+    width: 207px;
+    height: 20px;
+    left: 16px;
+    top: 40px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #333333;
+}
+
+div.history {
+    position: absolute;
+    width: 413px;
+    height: 170px;
+    left: 0px;
+    top: 486px;
+}
+
+div#comments {
+    position: absolute;
+    left: 4.27%;
+    right: 64.8%;
+    top: 0%;
+    bottom: 88.24%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+div.user-comment-section {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 16.47%;
+    bottom: 36.47%;
+}
+#user-area {
+    position: absolute;
+    width: 194px;
+    height: 20px;
+    left: 16px;
+    top: 16px;
+    font-style: normal;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #333333;
+}
+
+#user-area > .user-name {
+    font-weight: bold;
+    font-size: 1em;
+    padding-right: 5px;
+}
+
+#user-area > span {
+    font-size: 14px;
+}
+
+#user-comment {
+    position: absolute;
+    width: 204px;
+    height: 20px;
+    left: 16px;
+    top: 44px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #333333;
+}
+
+div.main-input {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    position: absolute;
+    width: 380px;
+    height: 48px;
+    left: 16px;
+    top: 122px;
+    background: #FFFFFF;
+}
+
+.main-input > input{
+  width: 380px;
+  border-radius: 4px;
+  border: 1px solid #B4B4B4;
+  box-sizing: border-box; 
+}
+
+input {
+    outline: none;
+}
+
+input[type="textarea"]::placeholder {
+    position: relative;
+    width: 99px;
+    height: 24px;
+    left: 37px;
+    top: 0px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    display: flex;
+    align-items: center;
+    color: #B4B4B4;
+    /* Inside Auto Layout */  
+    flex: none;
+    order: 0;
+    align-self: flex-start;
+    margin: 0px 0px;
+}
+
+div.icon-editor {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 12px;
+    top: 12px;
+}
+
+/* Button styles */
+
+.check-button {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 16px;
+    top: 16px;
+}
+
+.button-ellipse {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    left: -10px;
+    top: -10px;
+    outline: none;
+    /* Green */
+    background: #37A447;
+    /* Elevation level 2 */
+    box-shadow: 0px 2px 4px rgba(51, 51, 51, 0.2), 0px 4px 8px rgba(51, 51, 51, 0.16), 0px 1px 8px rgba(51, 51, 51, 0.12);
+    border-radius: 20px;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    outline: none;
+    padding: 0px;
+    position: absolute;
+    top: 210px;
+    width: 13px;
+    height: 48px;
+    right: 70px;
+    bottom: 26px;
+    background: #37A447;
+    /* Elevation level 2 */
+    box-shadow: 0px 2px 4px rgba(51, 51, 51, 0.2), 0px 4px 8px rgba(51, 51, 51, 0.16), 0px 1px 8px rgba(51, 51, 51, 0.12);
+    border-radius: 8px;
+}
+button:focus {
+    outline: 0;
+}
+
